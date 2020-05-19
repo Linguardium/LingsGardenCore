@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "lingsgardencore",
+  "version": "${version}",
+  "name": "Ling's Garden - Core",
+  "description": "Core features used by all Lings Garden mods (mostly minecraft tag compatibility)",
+  "authors": [
+    "Linguardium"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/lingsgardencore/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "mod.linguardium.lingsgardencore.LingsGardenCore"
+    ],
+    "client": [],
+    "server": []
+  },
+  "mixins": [
+    "lingsgardencore.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  }
+}
