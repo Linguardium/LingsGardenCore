@@ -33,6 +33,7 @@ import java.util.Map;
 public class FeatureAdderMixin {
     @Shadow
     @Final
+    protected
     Map<GenerationStep.Feature, List<ConfiguredFeature<?, ?>>> features;
 
     @Inject(at=@At("RETURN"),method="generateFeatureStep", locals = LocalCapture.CAPTURE_FAILHARD)
@@ -44,7 +45,7 @@ public class FeatureAdderMixin {
                 feature.generate(world, chunkGenerator, random, pos);
             } catch (Exception var13) {
                 CrashReport crashReport = CrashReport.create(var13, "Feature placement");
-                crashReport.addElement("Feature").add("Id", Registry.FEATURE.getId(feature.feature)).add("Description", feature.feature::toString);
+                crashReport.addElement("Feature").add("Id", Registry.FEATURE.getId(feature.feature)).add("Description", feature.feature.toString());
                 throw new CrashException(crashReport);
             }
         }
