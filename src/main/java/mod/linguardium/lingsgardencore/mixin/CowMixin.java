@@ -23,13 +23,7 @@ import static mod.linguardium.lingsgardencore.Tags.MOOSHROOMS_BREEDING_ITEMS;
 
 @Mixin(CowEntity.class)
 public abstract class CowMixin extends AnimalEntity {
-        @Final
-        @Mutable
-        static Ingredient BREEDING_INGREDIENT;
 
-        static {
-            BREEDING_INGREDIENT = Ingredient.fromTag(COWS_BREEDING_ITEMS);
-        }
 
     @Redirect(at=@At(value="INVOKE", target="Lnet/minecraft/entity/ai/goal/GoalSelector;add(ILnet/minecraft/entity/ai/goal/Goal;)V"),method="initGoals")
     private void LingsGarden_addCowGoals(GoalSelector selector, int weight, Goal goal) {
