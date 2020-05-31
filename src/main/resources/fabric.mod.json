@@ -16,7 +16,7 @@
     "main": [
       "mod.linguardium.lingsgardencore.LingsGardenCore"
     ],
-    "client": [],
+    "client": ["mod.linguardium.lingsgardencore.LingsGardenCoreClient"],
     "server": []
   },
   "mixins": [

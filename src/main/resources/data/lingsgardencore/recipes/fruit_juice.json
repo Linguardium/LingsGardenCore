@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:fruits"
+    },
+    {
+      "tag": "c:fruits"
+    },
+    {
+      "tag": "c:fruits"
+    },
+    {
+      "tag": "c:juicers"
+    }
+
+  ],
+  "result": {
+    "item": "lingsgardencore:fruit_juice",
+    "count": 1
+  }
+}
